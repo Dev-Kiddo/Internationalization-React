@@ -1,19 +1,17 @@
-// import { useTraslation } from "react-i18next";
-import { useTranslation } from "react-i18next";
-import "./App.css";
-
-// For this internationalization - using i18next library
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import LanguageSwitcher from "./components/LanguageSwitcher";
 
 function App() {
-  const { t, i18n } = useTranslation();
-
   return (
-    <div>
-      <h1>{t("welcome")}</h1>
-      <p>{t("description")}</p>
-      <button onClick={() => i18n.changeLanguage("ta")}>தமிழ்</button>
-      <button onClick={() => i18n.changeLanguage("en")}>English</button>
-    </div>
+    <Router>
+      <LanguageSwitcher />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 

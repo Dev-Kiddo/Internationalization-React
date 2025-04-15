@@ -1,4 +1,16 @@
 {
-  "welcome": "Welcome",
-  "description": "This is your app"
+  "home": {
+    "title": "Welcome to Our Website",
+    "subtitle": "We provide excellent services to help you succeed!"
+  },
+  "contact": {
+    "heading": "Contact Us",
+    "message": "We'd love to hear from you. Please fill out the form below."
+  },
+  "services": {
+    "heading": "Our Services",
+    "service1": "Web Development",
+    "service2": "Mobile Apps",
+    "service3": "SEO Optimization"
+  }
 }
